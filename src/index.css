@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.05em;
+}
+
+.work-sans-font {
+  font-family: "Work Sans", sans-serif;
+}

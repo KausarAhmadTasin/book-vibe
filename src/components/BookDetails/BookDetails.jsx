@@ -10,7 +10,7 @@ const BookDetails = () => {
   const book = books.find((book) => book.book_id === idInd);
 
   const handleReadClicked = () => {
-    addToReadList(id);
+    addToReadList(idInd);
     toast("Added to read list!");
   };
 

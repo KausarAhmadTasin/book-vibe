@@ -7,6 +7,8 @@ import { CiFileOn } from "react-icons/ci";
 const ListedBooks = () => {
   const books = useLoaderData();
   const [listedBooks, setListedBooks] = useState([]);
+  const [readIsOpen, setReadIsOpen] = useState(true);
+  const [wishIsOpen, setWishIsOpen] = useState(false);
 
   useEffect(() => {
     const storedBooks = getStoredBookList();
@@ -19,11 +21,38 @@ const ListedBooks = () => {
     }
   }, [books]);
 
+  // Tab toggle
+  const toggleTab = () => {
+    setReadIsOpen(!readIsOpen);
+    setWishIsOpen(!wishIsOpen);
+  };
+
   return (
     <div className="container mx-auto my-10">
       <h1 className="bg-[#1313130D] h-24 font-bold text-2xl flex items-center justify-center rounded-xl text-center work-sans-font">
         Books
       </h1>
+
+      {/* Tabs */}
+      <div
+        role="tablist"
+        className="work-sans-font font-semibold tabs tabs-lifted"
+      >
+        <a
+          onClick={toggleTab}
+          role="tab"
+          className={`${readIsOpen && "tab-active"} tab`}
+        >
+          Read Books
+        </a>
+        <a
+          onClick={toggleTab}
+          role="tab"
+          className={`${wishIsOpen && "tab-active"} tab `}
+        >
+          Wishlist Books
+        </a>
+      </div>
       <ul>
         {listedBooks.map((book) => (
           <li key={book.book_id} className="p-6 border rounded-2xl my-6">

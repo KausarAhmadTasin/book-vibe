@@ -1,14 +1,22 @@
-import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { addToReadList } from "../utils/localStorage";
 
 const BookDetails = () => {
   const books = useLoaderData();
   const { id } = useParams();
   const idInd = parseInt(id);
   const book = books.find((book) => book.book_id === idInd);
-  console.log(book);
+
+  const handleReadClicked = () => {
+    addToReadList(id);
+    toast("Added to read list!");
+  };
+
   return (
     <div className="container mx-auto my-10">
+      <ToastContainer />
       <div className="flex gap-x-12 work-sans-font items-center">
         <div>
           <img
@@ -63,7 +71,9 @@ const BookDetails = () => {
             </p>
           </div>
           <div className="flex gap-x-4">
-            <button className="btn border ">Read</button>
+            <button onClick={handleReadClicked} className="btn border ">
+              Read
+            </button>
             <button className="btn text-white bg-[#50B1C9]">Wishlist</button>
           </div>
         </div>

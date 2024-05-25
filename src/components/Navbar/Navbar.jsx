@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <div>
@@ -24,12 +26,16 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content gap-3 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li className="text-[#23BE0A] hover:bg-white border rounded-lg font-semibold hover:border-[#23BE0A]">
-                <a>Home</a>
-              </li>
-              <li className="text-[#23BE0A] hover:bg-white border rounded-lg font-semibold hover:border-[#23BE0A]">
-                <a>Listed Books</a>
-              </li>
+              <Link to="/">
+                <li className="text-[#23BE0A] hover:bg-white border rounded-lg font-semibold hover:border-[#23BE0A]">
+                  <a>Home</a>
+                </li>
+              </Link>
+              <Link to="/listedBooks">
+                <li className="text-[#23BE0A] hover:bg-white border rounded-lg font-semibold hover:border-[#23BE0A]">
+                  <a>Listed Books</a>
+                </li>
+              </Link>
               <li className="text-[#23BE0A] hover:bg-white border rounded-lg font-semibold hover:border-[#23BE0A]">
                 <a>Pages to Read</a>
               </li>
@@ -41,12 +47,16 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-x-3">
-            <li className="text-[#23BE0A] hover:bg-white border rounded-lg font-semibold hover:border-[#23BE0A]">
-              <a>Home</a>
-            </li>
-            <li className="text-[#23BE0A] hover:bg-white border rounded-lg font-semibold hover:border-[#23BE0A]">
-              <a>Listed Books</a>
-            </li>
+            <Link to="/">
+              <li className="text-[#23BE0A] hover:bg-white border rounded-lg font-semibold hover:border-[#23BE0A]">
+                <a>Home</a>
+              </li>
+            </Link>
+            <Link to="/listedBooks">
+              <li className="text-[#23BE0A] hover:bg-white border rounded-lg font-semibold hover:border-[#23BE0A]">
+                <a>Listed Books</a>
+              </li>
+            </Link>
             <li className="text-[#23BE0A] hover:bg-white border rounded-lg font-semibold hover:border-[#23BE0A]">
               <a>Pages to Read</a>
             </li>

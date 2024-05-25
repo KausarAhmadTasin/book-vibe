@@ -1,12 +1,14 @@
+import { Link, useLoaderData } from "react-router-dom";
 import Books from "../Books/Books";
 
 const Banner = () => {
+  const books = useLoaderData();
   return (
     <div className="md:container mx-3 md:mx-auto my-10 ">
       <div className="hero md:h-[34.625rem] bg-base-200 rounded-3xl md:px-10 lg:px-20 ">
         <div className="hero-content flex-col md:flex-row-reverse">
           <img
-            src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
+            src={books[0].image}
             className="max-w-sm rounded-lg shadow-2xl"
           />
           <div>
@@ -18,13 +20,15 @@ const Banner = () => {
               reviews, insightful recommendations, and the latest in literary
               news.
             </p>
-            <button className="btn bg-[#23BE0A] text-white px-7">
-              View The List
-            </button>
+            <Link to="/listedBooks">
+              <button className="btn bg-[#23BE0A] text-white px-7">
+                View The List
+              </button>
+            </Link>
           </div>
         </div>
       </div>
-      <Books />
+      <Books books={books} />
     </div>
   );
 };

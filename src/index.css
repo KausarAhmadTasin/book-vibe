@@ -11,4 +11,9 @@ body {
 
 .work-sans-font {
   font-family: "Work Sans", sans-serif;
+  letter-spacing: 0em;
+}
+
+.playfair-font {
+  font-family: "Playfair Display", serif;
 }

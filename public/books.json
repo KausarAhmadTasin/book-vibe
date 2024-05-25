@@ -1,0 +1,80 @@
+[
+  {
+    "book_id": 1,
+    "book_name": "Nishithini",
+    "author": "Sanjay Das",
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1278476973i/8547493.jpg",
+    "review": "An intriguing tale that delves into the mysteries of human emotions and relationships. A must-read for those who enjoy psychological thrillers.",
+    "total_pages": 310,
+    "ratings": 4,
+    "category": "mystery",
+    "tags": ["thriller", "psychological"],
+    "publisher": "Mystery House",
+    "year_of_publication": 2015
+  },
+  {
+    "book_id": 2,
+    "book_name": "Sundori Shomoy",
+    "author": "Anik Dey",
+    "image": "https://static-01.daraz.com.bd/p/ed616e6994f85dab3509a50b6169ed29.jpg",
+    "review": "A captivating romance set in the backdrop of a bustling city. The narrative is both heartwarming and thought-provoking.",
+    "total_pages": 278,
+    "ratings": 4.5,
+    "category": "romance",
+    "tags": ["love", "urban"],
+    "publisher": "City Lights Publishers",
+    "year_of_publication": 2020
+  },
+  {
+    "book_id": 3,
+    "book_name": "Alo Andhokare",
+    "author": "Rita Saha",
+    "image": "https://boitoi.in/wp-content/uploads/2020/02/PicsArt_02-11-11.45.15.jpg",
+    "review": "A moving story about finding hope in the darkest of times. The characters are well-developed and the plot is compelling.",
+    "total_pages": 350,
+    "ratings": 4.8,
+    "category": "drama",
+    "tags": ["hope", "inspirational"],
+    "publisher": "Hope Publishers",
+    "year_of_publication": 2018
+  },
+  {
+    "book_id": 4,
+    "book_name": "Bhoy",
+    "author": "Kamal Roy",
+    "image": "https://bdebooks.com/wp-content/uploads/2023/01/Bhoy-Samagra-By-Bibhutibhushan-Bandyopadhyay.jpg",
+    "review": "A spine-chilling horror novel that keeps you on the edge of your seat. Perfect for fans of the supernatural.",
+    "total_pages": 290,
+    "ratings": 4.2,
+    "category": "horror",
+    "tags": ["supernatural", "thriller"],
+    "publisher": "Dark Nights Publishing",
+    "year_of_publication": 2017
+  },
+  {
+    "book_id": 5,
+    "book_name": "Poriborton",
+    "author": "Sabrina Khan",
+    "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/Poriborton-Tuhin_Mahmud-da897-289918.jpeg",
+    "review": "An enlightening read about personal growth and transformation. The author's insights are profound and inspiring.",
+    "total_pages": 220,
+    "ratings": 4.7,
+    "category": "self-help",
+    "tags": ["growth", "inspiration"],
+    "publisher": "Mindset Publishers",
+    "year_of_publication": 2021
+  },
+  {
+    "book_id": 6,
+    "book_name": "Sadhinotar Golpo",
+    "author": "Arif Chowdhury",
+    "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/Sadhinotar_Golpa-Aslam_Sani-bb40a-222783.jpg",
+    "review": "A historical novel that brings the struggle for independence to life. The attention to detail and historical accuracy are commendable.",
+    "total_pages": 400,
+    "ratings": 4.9,
+    "category": "historical",
+    "tags": ["independence", "history"],
+    "publisher": "Heritage Books",
+    "year_of_publication": 2019
+  }
+]

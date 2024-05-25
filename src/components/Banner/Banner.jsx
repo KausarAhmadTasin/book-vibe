@@ -1,3 +1,5 @@
+import Books from "../Books/Books";
+
 const Banner = () => {
   return (
     <div className="md:container mx-3 md:mx-auto my-10 ">
@@ -22,6 +24,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
+      <Books />
     </div>
   );
 };

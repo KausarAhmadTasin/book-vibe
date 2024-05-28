@@ -1,7 +1,8 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { addToReadList } from "../utils/localStorage";
+import { addToReadList, getStoredBookList } from "../utils/localStorage";
+import { addToWishList, getStoredWishList } from "../utils/wishStorage";
 
 const BookDetails = () => {
   const books = useLoaderData();
@@ -10,8 +11,24 @@ const BookDetails = () => {
   const book = books.find((book) => book.book_id === idInd);
 
   const handleReadClicked = () => {
-    addToReadList(idInd);
-    toast("Added to read list!");
+    const readList = getStoredBookList();
+    if (readList.includes(idInd)) {
+      console.log("first");
+      toast.warning("Book already exists!");
+    } else {
+      addToReadList(idInd);
+      toast.success("Added to read list!");
+    }
+  };
+
+  const handleWishClicked = () => {
+    const wishList = getStoredWishList();
+    if (wishList.includes(idInd)) {
+      toast.warning("Book already exists!");
+    } else {
+      addToWishList(idInd);
+      toast("Added to wish list!");
+    }
   };
 
   return (
@@ -74,7 +91,12 @@ const BookDetails = () => {
             <button onClick={handleReadClicked} className="btn border ">
               Read
             </button>
-            <button className="btn text-white bg-[#50B1C9]">Wishlist</button>
+            <button
+              onClick={handleWishClicked}
+              className="btn text-white bg-[#50B1C9]"
+            >
+              Wishlist
+            </button>
           </div>
         </div>
       </div>

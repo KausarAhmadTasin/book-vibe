@@ -11,7 +11,7 @@ const addToWishList = (id) => {
   const bookExists = storedWishList.find((book_id) => book_id === id);
   if (!bookExists) {
     storedWishList.push(id);
-    localStorage.setItem("read-list", JSON.stringify(storedWishList));
+    localStorage.setItem("wish-list", JSON.stringify(storedWishList));
   }
 };
 

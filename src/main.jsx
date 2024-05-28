@@ -7,7 +7,7 @@ import BookDetails from "./components/BookDetails/BookDetails.jsx";
 import ListedBooks from "./components/ListedBooks/ListedBooks.jsx";
 import React from "react";
 import CustomShapeBarChart from "./components/pagesChart/pagesChart.jsx";
-import NotFound from "./components/notFound/notFound.jsx";
+import NotFound from "./components/notFound/NotFound";
 
 const router = createBrowserRouter([
   {

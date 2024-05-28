@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   BarChart,
   Bar,
@@ -17,13 +17,7 @@ const CustomBar = (props) => {
   return (
     <g>
       <path d={path} fill={fill} />
-      <text
-        x={x + width / 2}
-        y={y - 10}
-        textAnchor="middle"
-        fill={fill}
-        fontSize={16}
-      >
+      <text x={x + width / 2} textAnchor="middle" fill={fill} fontSize={16}>
         {value}
       </text>
     </g>
@@ -37,18 +31,21 @@ const CustomShapeBarChart = () => {
     fetch("../../../public/books.json")
       .then((res) => res.json())
       .then((books) => {
-        // Transform the data to fit the chart's requirements
         const transformedData = books.map((book) => ({
           name: book.book_name,
-          value: book.value, // Assuming you have a 'value' property in your JSON data
-          fill: book.fill || "#0088FE", // Default color if fill is not provided
+          value: book.total_pages,
+          fill: book.fill || "#0088FE",
         }));
         setData(transformedData);
       });
   }, []);
 
   return (
-    <ResponsiveContainer width="100%" height={400}>
+    <ResponsiveContainer
+      className="mt-14 work-sans-font"
+      width="100%"
+      height={400}
+    >
       <BarChart
         data={data}
         margin={{ top: 20, right: 30, left: 20, bottom: 5 }}

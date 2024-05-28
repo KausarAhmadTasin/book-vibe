@@ -6,11 +6,14 @@ import Banner from "./components/Banner/Banner.jsx";
 import BookDetails from "./components/BookDetails/BookDetails.jsx";
 import ListedBooks from "./components/ListedBooks/ListedBooks.jsx";
 import React from "react";
+import CustomShapeBarChart from "./components/pagesChart/pagesChart.jsx";
+import NotFound from "./components/notFound/notFound.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <NotFound />,
     children: [
       {
         path: "/",
@@ -26,6 +29,10 @@ const router = createBrowserRouter([
         path: "/listedBooks",
         element: <ListedBooks />,
         loader: () => fetch("../public/books.json"),
+      },
+      {
+        path: "/chart",
+        element: <CustomShapeBarChart />,
       },
     ],
   },

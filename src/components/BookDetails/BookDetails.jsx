@@ -17,14 +17,18 @@ const BookDetails = () => {
       toast.warning("Book already exists!");
     } else {
       addToReadList(idInd);
-      toast.success("Added to read list!");
+      toast("Added to read list!");
     }
   };
 
   const handleWishClicked = () => {
     const wishList = getStoredWishList();
+    const readList = getStoredBookList();
+
     if (wishList.includes(idInd)) {
       toast.warning("Book already exists!");
+    } else if (readList.includes(idInd)) {
+      toast.warning("You have already read this book!");
     } else {
       addToWishList(idInd);
       toast("Added to wish list!");
@@ -34,15 +38,15 @@ const BookDetails = () => {
   return (
     <div className="container mx-auto my-10">
       <ToastContainer />
-      <div className="flex gap-x-12 work-sans-font items-center">
+      <div className="md:flex  gap-x-12 work-sans-font items-center">
         <div>
           <img
-            className="lg:w-[35.8125rem] rounded-3xl lg:h-[38.4375rem]"
+            className="lg:w-[35.8125rem] mx-auto rounded-3xl lg:h-[38.4375rem]"
             src={book.image}
             alt=""
           />
         </div>
-        <div className="max-w-[34.3125rem]">
+        <div className="lg:max-w-[34.3125rem] mx-3 my-6">
           <h2 className="font-bold text-[2.5rem] playfair-font">
             {book.book_name}
           </h2>

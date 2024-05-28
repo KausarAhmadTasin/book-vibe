@@ -57,9 +57,11 @@ const Navbar = () => {
                 <a>Listed Books</a>
               </li>
             </Link>
-            <li className="text-[#23BE0A] hover:bg-white border rounded-lg font-semibold hover:border-[#23BE0A]">
-              <a>Pages to Read</a>
-            </li>
+            <Link to="/chart">
+              <li className="text-[#23BE0A] hover:bg-white border rounded-lg font-semibold hover:border-[#23BE0A]">
+                <a>Pages to Read</a>
+              </li>
+            </Link>
           </ul>
         </div>
         <div className="navbar-end gap-x-3 md:mr-4">

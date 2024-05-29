@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/",
-      "destination": "https://book-vibe-git-main-kausar-ahmads-projects.vercel.app/"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }

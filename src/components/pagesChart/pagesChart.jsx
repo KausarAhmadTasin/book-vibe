@@ -28,7 +28,7 @@ const CustomShapeBarChart = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("../../../public/books.json")
+    fetch("/books.json")
       .then((res) => res.json())
       .then((books) => {
         const transformedData = books.map((book) => ({
@@ -37,6 +37,9 @@ const CustomShapeBarChart = () => {
           fill: book.fill || "#0088FE",
         }));
         setData(transformedData);
+      })
+      .catch((error) => {
+        console.error("Error fetching books:", error);
       });
   }, []);
 
